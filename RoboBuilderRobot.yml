@@ -168,10 +168,26 @@ Children:
         validators: null, value: 5.0}
   - Name: AirCompressor
     Base: Subsystem
-    Children: []
+    Children:
+    - Name: CompressorSpike
+      Base: Spike
+      Children: []
+      Properties:
+        Output Module (Digital): !!robotbuilder.data.properties.ChoicesProperty
+          choices: ['1', '2']
+          default: '1'
+          name: Output Module (Digital)
+          validators: [RelayOutput]
+          value: '1'
+        Output Channel (Relay): !!robotbuilder.data.properties.ChoicesProperty
+          choices: ['1', '2', '3', '4', '5', '6', '7', '8']
+          default: '1'
+          name: Output Channel (Relay)
+          validators: [RelayOutput]
+          value: '1'
     Properties:
       Default Command: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
-        name: Default Command, type: Command, validators: null, value: CompressorRun}
+        name: Default Command, type: Command, validators: null, value: AirCompressorRun}
   Properties: {}
 - Name: Operator Interface
   Base: OI
@@ -242,7 +258,7 @@ Children:
         name: Requires, type: Subsystem, validators: null, value: BallArm}
       Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: true,
         name: Button on SmartDashboard, validators: null, value: true}
-  - Name: CompressorRun
+  - Name: AirCompressorRun
     Base: Command
     Children: []
     Properties:

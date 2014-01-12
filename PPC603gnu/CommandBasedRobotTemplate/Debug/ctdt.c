@@ -7,13 +7,13 @@
 /*       -fdollars-in-identifiers flag.                   */
 
 
+void _GLOBAL__I__ZN16AirCompressorRunC2Ev();
+
 void _GLOBAL__I__ZN17AutonomousCommandC2Ev();
 
 void _GLOBAL__I__ZN13BallArmExtendC2Ev();
 
 void _GLOBAL__I__ZN14BallArmRetractC2Ev();
-
-void _GLOBAL__I__ZN13CompressorRunC2Ev();
 
 void _GLOBAL__I__ZN10DriveRobotC2Ev();
 
@@ -22,6 +22,8 @@ void _GLOBAL__I__ZN2OIC2Ev();
 void _GLOBAL__I__ZN5Robot10driveTrainE();
 
 void _GLOBAL__I__ZN8RobotMap24driveTrainFrontLeftWheelE();
+
+void _GLOBAL__I__ZN13AirCompressorC2Ev();
 
 void _GLOBAL__I__ZN7BallArmC2Ev();
 
@@ -84,14 +86,15 @@ void _GLOBAL__I__ZN11StringArray19STRING_ARRAY_RAW_IDE();
 extern void (*_ctors[])();
 void (*_ctors[])() =
     {
+    _GLOBAL__I__ZN16AirCompressorRunC2Ev,
     _GLOBAL__I__ZN17AutonomousCommandC2Ev,
     _GLOBAL__I__ZN13BallArmExtendC2Ev,
     _GLOBAL__I__ZN14BallArmRetractC2Ev,
-    _GLOBAL__I__ZN13CompressorRunC2Ev,
     _GLOBAL__I__ZN10DriveRobotC2Ev,
     _GLOBAL__I__ZN2OIC2Ev,
     _GLOBAL__I__ZN5Robot10driveTrainE,
     _GLOBAL__I__ZN8RobotMap24driveTrainFrontLeftWheelE,
+    _GLOBAL__I__ZN13AirCompressorC2Ev,
     _GLOBAL__I__ZN7BallArmC2Ev,
     _GLOBAL__I__ZN11BallGrabberC2Ev,
     _GLOBAL__I__ZN10DriveTrainC2Ev,
@@ -124,13 +127,13 @@ void (*_ctors[])() =
     0
     };
 
+void _GLOBAL__D__ZN16AirCompressorRunC2Ev();
+
 void _GLOBAL__D__ZN17AutonomousCommandC2Ev();
 
 void _GLOBAL__D__ZN13BallArmExtendC2Ev();
 
 void _GLOBAL__D__ZN14BallArmRetractC2Ev();
-
-void _GLOBAL__D__ZN13CompressorRunC2Ev();
 
 void _GLOBAL__D__ZN10DriveRobotC2Ev();
 
@@ -139,6 +142,8 @@ void _GLOBAL__D__ZN2OIC2Ev();
 void _GLOBAL__D__ZN5Robot10driveTrainE();
 
 void _GLOBAL__D__ZN8RobotMap24driveTrainFrontLeftWheelE();
+
+void _GLOBAL__D__ZN13AirCompressorC2Ev();
 
 void _GLOBAL__D__ZN7BallArmC2Ev();
 
@@ -191,14 +196,15 @@ void _GLOBAL__D__ZN11StringArray19STRING_ARRAY_RAW_IDE();
 extern void (*_dtors[])();
 void (*_dtors[])() =
     {
+    _GLOBAL__D__ZN16AirCompressorRunC2Ev,
     _GLOBAL__D__ZN17AutonomousCommandC2Ev,
     _GLOBAL__D__ZN13BallArmExtendC2Ev,
     _GLOBAL__D__ZN14BallArmRetractC2Ev,
-    _GLOBAL__D__ZN13CompressorRunC2Ev,
     _GLOBAL__D__ZN10DriveRobotC2Ev,
     _GLOBAL__D__ZN2OIC2Ev,
     _GLOBAL__D__ZN5Robot10driveTrainE,
     _GLOBAL__D__ZN8RobotMap24driveTrainFrontLeftWheelE,
+    _GLOBAL__D__ZN13AirCompressorC2Ev,
     _GLOBAL__D__ZN7BallArmC2Ev,
     _GLOBAL__D__ZN11BallGrabberC2Ev,
     _GLOBAL__D__ZN10DriveTrainC2Ev,
