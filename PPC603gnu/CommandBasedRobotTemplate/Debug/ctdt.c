@@ -13,6 +13,8 @@ void _GLOBAL__I__ZN13BallArmExtendC2Ev();
 
 void _GLOBAL__I__ZN14BallArmRetractC2Ev();
 
+void _GLOBAL__I__ZN13CompressorRunC2Ev();
+
 void _GLOBAL__I__ZN10DriveRobotC2Ev();
 
 void _GLOBAL__I__ZN2OIC2Ev();
@@ -85,6 +87,7 @@ void (*_ctors[])() =
     _GLOBAL__I__ZN17AutonomousCommandC2Ev,
     _GLOBAL__I__ZN13BallArmExtendC2Ev,
     _GLOBAL__I__ZN14BallArmRetractC2Ev,
+    _GLOBAL__I__ZN13CompressorRunC2Ev,
     _GLOBAL__I__ZN10DriveRobotC2Ev,
     _GLOBAL__I__ZN2OIC2Ev,
     _GLOBAL__I__ZN5Robot10driveTrainE,
@@ -126,6 +129,8 @@ void _GLOBAL__D__ZN17AutonomousCommandC2Ev();
 void _GLOBAL__D__ZN13BallArmExtendC2Ev();
 
 void _GLOBAL__D__ZN14BallArmRetractC2Ev();
+
+void _GLOBAL__D__ZN13CompressorRunC2Ev();
 
 void _GLOBAL__D__ZN10DriveRobotC2Ev();
 
@@ -189,6 +194,7 @@ void (*_dtors[])() =
     _GLOBAL__D__ZN17AutonomousCommandC2Ev,
     _GLOBAL__D__ZN13BallArmExtendC2Ev,
     _GLOBAL__D__ZN14BallArmRetractC2Ev,
+    _GLOBAL__D__ZN13CompressorRunC2Ev,
     _GLOBAL__D__ZN10DriveRobotC2Ev,
     _GLOBAL__D__ZN2OIC2Ev,
     _GLOBAL__D__ZN5Robot10driveTrainE,

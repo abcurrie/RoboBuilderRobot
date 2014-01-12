@@ -129,6 +129,10 @@ CommandBasedRobotTemplate/$(MODE_DIR)/Objects/RoboBuilderRobot/Commands/BallArmR
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
 
+CommandBasedRobotTemplate/$(MODE_DIR)/Objects/RoboBuilderRobot/Commands/CompressorRun.o : $(PRJ_ROOT_DIR)/Commands/CompressorRun.cpp $(FORCE_FILE_BUILD)
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
+
+
 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/RoboBuilderRobot/Commands/DriveRobot.o : $(PRJ_ROOT_DIR)/Commands/DriveRobot.cpp $(FORCE_FILE_BUILD)
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
@@ -160,6 +164,7 @@ CommandBasedRobotTemplate/$(MODE_DIR)/Objects/RoboBuilderRobot/Subsystems/DriveT
 OBJECTS_CommandBasedRobotTemplate = CommandBasedRobotTemplate/$(MODE_DIR)/Objects/RoboBuilderRobot/Commands/AutonomousCommand.o \
 	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/RoboBuilderRobot/Commands/BallArmExtend.o \
 	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/RoboBuilderRobot/Commands/BallArmRetract.o \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/RoboBuilderRobot/Commands/CompressorRun.o \
 	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/RoboBuilderRobot/Commands/DriveRobot.o \
 	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/RoboBuilderRobot/OI.o \
 	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/RoboBuilderRobot/Robot.o \
@@ -223,6 +228,10 @@ CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/RoboBuilderRobot/Com
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
 
+CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/RoboBuilderRobot/Commands/CompressorRun.o : $(PRJ_ROOT_DIR)/Commands/CompressorRun.cpp $(FORCE_FILE_BUILD)
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
+
+
 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/RoboBuilderRobot/Commands/DriveRobot.o : $(PRJ_ROOT_DIR)/Commands/DriveRobot.cpp $(FORCE_FILE_BUILD)
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
@@ -254,6 +263,7 @@ CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/RoboBuilderRobot/Sub
 OBJECTS_CommandBassedRobotTemplate_partialImage = CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/RoboBuilderRobot/Commands/AutonomousCommand.o \
 	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/RoboBuilderRobot/Commands/BallArmExtend.o \
 	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/RoboBuilderRobot/Commands/BallArmRetract.o \
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/RoboBuilderRobot/Commands/CompressorRun.o \
 	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/RoboBuilderRobot/Commands/DriveRobot.o \
 	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/RoboBuilderRobot/OI.o \
 	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/RoboBuilderRobot/Robot.o \
@@ -275,12 +285,13 @@ CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/CommandBassedRobotTemplate_p
 force : 
 
 DEP_FILES := CommandBasedRobotTemplate/$(MODE_DIR)/Objects/RoboBuilderRobot/Commands/AutonomousCommand.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/RoboBuilderRobot/Commands/BallArmExtend.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/RoboBuilderRobot/Commands/BallArmRetract.d \
-	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/RoboBuilderRobot/Commands/DriveRobot.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/RoboBuilderRobot/OI.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/RoboBuilderRobot/Robot.d \
-	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/RoboBuilderRobot/RobotMap.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/RoboBuilderRobot/Subsystems/BallArm.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/RoboBuilderRobot/Subsystems/BallGrabber.d \
-	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/RoboBuilderRobot/Subsystems/DriveTrain.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/RoboBuilderRobot/Commands/AutonomousCommand.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/RoboBuilderRobot/Commands/BallArmExtend.d \
-	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/RoboBuilderRobot/Commands/BallArmRetract.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/RoboBuilderRobot/Commands/DriveRobot.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/RoboBuilderRobot/OI.d \
-	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/RoboBuilderRobot/Robot.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/RoboBuilderRobot/RobotMap.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/RoboBuilderRobot/Subsystems/BallArm.d \
-	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/RoboBuilderRobot/Subsystems/BallGrabber.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/RoboBuilderRobot/Subsystems/DriveTrain.d
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/RoboBuilderRobot/Commands/CompressorRun.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/RoboBuilderRobot/Commands/DriveRobot.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/RoboBuilderRobot/OI.d \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/RoboBuilderRobot/Robot.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/RoboBuilderRobot/RobotMap.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/RoboBuilderRobot/Subsystems/BallArm.d \
+	 CommandBasedRobotTemplate/$(MODE_DIR)/Objects/RoboBuilderRobot/Subsystems/BallGrabber.d CommandBasedRobotTemplate/$(MODE_DIR)/Objects/RoboBuilderRobot/Subsystems/DriveTrain.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/RoboBuilderRobot/Commands/AutonomousCommand.d \
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/RoboBuilderRobot/Commands/BallArmExtend.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/RoboBuilderRobot/Commands/BallArmRetract.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/RoboBuilderRobot/Commands/CompressorRun.d \
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/RoboBuilderRobot/Commands/DriveRobot.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/RoboBuilderRobot/OI.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/RoboBuilderRobot/Robot.d \
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/RoboBuilderRobot/RobotMap.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/RoboBuilderRobot/Subsystems/BallArm.d CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/RoboBuilderRobot/Subsystems/BallGrabber.d \
+	 CommandBassedRobotTemplate_partialImage/$(MODE_DIR)/Objects/RoboBuilderRobot/Subsystems/DriveTrain.d
 -include $(DEP_FILES)
 
 
